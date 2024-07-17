@@ -1,0 +1,23 @@
+
+
+
+ActiveWindow
+{
+  title: 'main.ts - ef_vite_ts - Visual Studio Code',
+  application: 'Code',
+  path: '/usr/share/code/code /home/scott/Documents/projects/kontext_root',
+  pid: 1824778,
+  icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAYAAAB/HSuDAAAACXBIWXMAAA7DAAAOwwHHb6hkAANd1ElEQVR4XuzAAQEAAAABIP6fNkTlHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA284298 more characters
+}
+
+get-windows
+{
+  platform: 'linux',
+  title: 'main.ts - ef_vite_ts - Visual Studio Code',
+  id: 39845913,
+  owner: { name: 'Code', processId: 1824778, path: '/usr/share/code/code' },
+  bounds: { x: 2576, y: 1479, width: 2521, height: 1397 },
+  memoryUsage: 207036416
+}
+
+

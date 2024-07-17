@@ -1,0 +1,39 @@
+directory: /home/scott/Documents/projects/kontext_root/ef_vite_ts/kontext_dir
+path: /home/scott/Documents/projects/kontext_root/ef_vite_ts/kontext_dir/config.yaml
+contextPaths:
+  - /home/scott/Documents/projects/kontext_root/ef_vite_ts/kontext_dir/contexts
+defaultWindowConfig: &a1
+  location: left
+  widthPercentage: 15
+  heightPercentage: 100
+monitors:
+  "1":
+    index: 0
+    id: 1
+    isDisabled: false
+    bounds:
+      x: 0
+      y: 696
+      width: 2560
+      height: 1440
+    windowConfig: *a1
+  "3":
+    index: 1
+    id: 3
+    isDisabled: true
+    bounds:
+      x: 2560
+      y: 0
+      width: 2560
+      height: 1440
+    windowConfig: *a1
+  "5":
+    index: 2
+    id: 5
+    isDisabled: true
+    bounds:
+      x: 2560
+      y: 1440
+      width: 2560
+      height: 1440
+    windowConfig: *a1

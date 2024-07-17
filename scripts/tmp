@@ -1,0 +1,19 @@
+--orange: rgb(197, 134, 25);
+    --ck-color-base-active: 								$orange;
+    --ck-color-base-active-focus:						$orange;
+    --ck-color-button-on-color:							$orange;
+    --ck-color-widget-type-around-button-active:		$orange;
+    --ck-color-focus-border:								$orange;
+    --ck-color-button-on-color:									rgb(214, 136, 0);
+    --ck-color-upload-bar-background: rgb(147, 74, 6);
+    --almostTransparentOrange: rgba(255, 136, 0, 0.103);
+    --ck-color-selector-focused-cell-background: $almostTransparentOrange;
+    --ck-color-button-on-background: 							$almostTransparentOrange;
+    --ck-color-button-on-hover-background: 						$almostTransparentOrange;
+    --ck-color-button-on-active-background: 					$almostTransparentOrange;
+    --ck-color-color-grid-check-icon: rgb(233, 144, 43);
+    --ck-color-base-focus: 										rgb(147, 74, 6);
+    --ck-color-focus-outer-shadow: rgba(53, 30, 3, 0.3);
+    // not sure what this one is... inverted color and kept the same transparency
+    --ck-table-selected-cell-background:  rgba(97, 48, 5, 0.3);
+    --ck-color-focus-disabled-shadow: rgba(136, 69, 7, 0.3);

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+
+sudo dpkg -i /home/scott/Documents/projects/kontext_root/ef_vite_ts/out/make/deb/x64/*.deb

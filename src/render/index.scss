@@ -1,0 +1,399 @@
+*::-webkit-scrollbar { 
+  display: none;
+  // overflow: auto;
+  // overflow-x: auto;
+  // overflow-y: hidden;
+}
+
+
+
+
+:root {
+  // editor
+  --alomstBlack: hsl(0, 0%, 12%);
+  // explorer
+  --darkGray: hsl(240, 1%, 15%);
+  // extensions bar
+  --midGray: hsl(0, 0%, 20%);
+  // extensions icons
+  --lightGray: hsl(0, 0%, 52%);
+  // text & active icons
+  --almostWhite: hsl(0, 0%, 80%);
+  font-family: sans-serif, serif, monospace;
+
+  --darkMode: 0;
+
+
+}
+
+
+// [darkmode] {
+//   background-color: rgb(0, 0, 0);
+// }
+
+// html, body {
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgb(0, 0, 0);
+// }
+
+
+//#region MENU BUTTONS
+$navButtonSize: 25px;
+$navButtonMargin: calc(#{$navButtonSize} * .1);
+$distanceToEdge: .2;
+#reactiveContainer .ck-toolbar {
+  padding-right: calc($navButtonSize * (1 + #{$distanceToEdge})) !important;
+}
+
+
+#ktNavContainer{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  // height: 39.5px;
+  z-index: 11000;
+  justify-content: flex-end;
+  // align-items: center;
+  pointer-events: none;
+  // padding-left: 
+
+
+  #ktNavBar {
+    // overflow: hidden;
+    // background-color: aquamarine;
+    // this helps with
+    // background-color: rgba(127, 127, 127, 0.5);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-start;
+    // top: 20%;
+    
+    margin-top: $navButtonMargin;
+    margin-right: calc($navButtonSize * #{$distanceToEdge});
+    // transform: translate(0, calc((100% - #{$navButtonSize} * 1.1) * -1));
+    transform: translate(0, calc((100% - #{$navButtonSize} - #{$navButtonMargin}) * -1));
+
+    // turn pointer events back on both of these are required
+    visibility: visible;
+    pointer-events: visible;
+    // margin-top: -98%;
+    // top: -100%;
+    // transform: translate(0, (calc(100% - #{$navButtonSize})));
+
+    transition: transform 0.25s ease-in-out;
+    
+  
+    &:hover {
+      transform: translate(0, 0);
+    }
+  
+
+  
+    .ktNavBarItem {
+      display: inline-block;
+      height: calc(#{$navButtonSize} * .8);
+      margin-top: calc(#{$navButtonMargin} * 2);
+      // margin-right: var(--baseMargin);
+      // margin-bottom: var(--baseMargin);
+      // margin-left: var(--baseMargin);
+      margin-right: $navButtonMargin;
+      margin-bottom: $navButtonMargin;
+      margin-left: $navButtonMargin;
+      // margin: calc(#{$navButtonSize} * .10);
+      // visibility: visible;
+      // pointer-events: visible;
+  
+  
+      
+    }
+  
+    // .ktNavButton:hover {
+    //   cursor: pointer;
+    // }
+
+
+    svg {
+      mask *{
+        stroke-width: 5px;
+      }
+    }
+  
+    #menuArrow{
+      scale: 1;
+      circle {
+        fill: rgb(133, 133, 133);
+      }
+    }
+  
+    #closeButton {
+      // the cross
+      // line {
+      //   stroke-width: 5;
+      // }
+      // scale: 1.1;
+      opacity: 0.6;
+      // transition: transform 0.1s ease-in-out;
+      transition: transform 0s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+        opacity: 0.9;
+      }
+  
+      circle {
+        fill: rgb(209, 45, 45);
+      }
+
+
+    }
+  }
+}
+
+//#endregion
+
+
+.editorContainer {
+  // position: absolute;
+  // top: -$navButtonSize;
+}
+
+// #ktNavBar:hover {
+//   cursor: pointer;
+// }
+
+
+
+html, body {
+  height: 100%;
+  width: 100%;
+  // overflow: hidden;
+
+
+}
+.editorContainer {
+  background-color: hsl(0, 0%, 90%);
+  width: 100%;
+  height: 100%;
+
+  
+  .editor {
+    background-color: hsl(0, 0%, 80%);
+    width: 100%;
+    max-width: 100%;
+    // height: 50% !important;
+    // max-height: 50% !important;
+    overflow: auto;
+    
+    // margin-bottom: 1px;
+    // overflow: auto;
+
+  }
+
+  .ck-editor {
+    // overflow: hidden;
+    // overflow: scroll;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: stretch;
+    // justify-items: stretch;
+    // flex-grow: 1;
+    // max-height: 100% !important;
+    // height: 648px !important;
+    
+  }
+
+  .ck-editor__main {
+    // overflow: hidden;
+    // background-color: hsl(0, 0%, 70%);
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: stretch;
+    // justify-items: stretch;
+    // flex-grow: 1;
+    // border: var(--ck-focus-ring);
+    // box-shadow: var(--ck-inner-shadow), 0 0;
+    // height: 100% !important;
+    // max-height: 50% !important;
+    // height: 648px !important;
+    height: 647px !important;
+    
+  }
+
+  .ck-content {
+    // max-height: 48% !important;
+    height: 645px !important;
+  }
+
+  // .ck-content {
+  //   flex-grow: 1;
+  // }
+
+
+}
+
+// toolbar
+.ck-sticky-panel, #toolbar.sticky {
+  position: sticky;
+  top: 0px
+  // display: none;
+}
+
+
+// border: var(--ck-focus-ring);
+
+// #reactiveContainer > div.ck.ck-reset.ck-editor.ck-rounded-corners {
+//   background-color: aqua !important;
+// }
+
+
+//#region ORIG HIEGHT 50% SPLIT
+
+// html, body {
+//   height: 100%;
+//   width: 100%;
+//   // overflow: hidden;
+
+
+// }
+// .editorContainer {
+//   width: 100%;
+//   height: 100%;
+  
+//   .editor {
+//     width: 100%;
+//     height: 50% !important;
+//     max-height: 50% !important;
+//     overflow: auto;
+//   }
+
+
+// }
+
+// // toolbar
+// .ck-sticky-panel {
+//   position: sticky;
+//   // display: none;
+// }
+
+//#endregion
+
+
+
+
+// its quick dirty and nasty but....
+// it also kept me from having to write a bunch of horrid css
+// todo: come up with a better way to do this
+//#region DARK MODE
+// :root {
+//     // set all of the relevant colors here
+//     // look in ref/cke-default-colors for a full list
+//     // right now we are just changing the blues to orange so it is inverted back to blue
+//     --orange: rgb(197, 134, 25);
+//     --ck-color-base-active: 								var(--orange);
+//     --ck-color-base-active-focus:						var(--orange);
+//     --ck-color-button-on-color:							var(--orange);
+//     --ck-color-widget-type-around-button-active:		var(--orange);
+//     --ck-color-focus-border:								var(--orange);
+//     --ck-color-button-on-color:									rgb(214, 136, 0);
+//     --ck-color-upload-bar-background: rgb(147, 74, 6);
+//     --almostTransparentOrange: rgba(255, 136, 0, 0.103);
+//     --ck-color-selector-focused-cell-background: var(--almostTransparentOrange);
+//     --ck-color-button-on-background: 							var(--almostTransparentOrange);
+//     --ck-color-button-on-hover-background: 						var(--almostTransparentOrange);
+//     --ck-color-button-on-active-background: 					var(--almostTransparentOrange);
+//     --ck-color-color-grid-check-icon: rgb(233, 144, 43);
+//     --ck-color-base-focus: 										rgb(147, 74, 6);
+//     --ck-color-focus-outer-shadow: rgba(53, 30, 3, 0.3);
+//     // not sure what this one is... inverted color and kept the same transparency
+//     --ck-table-selected-cell-background:  rgba(97, 48, 5, 0.3);
+//     --ck-color-focus-disabled-shadow: rgba(136, 69, 7, 0.3);
+
+// }
+
+// //  this sets up the main filter
+// body::after {
+//   content: '';
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   z-index: 10000;
+//   background-color: hsl(0, 0%, 90%);
+//   mix-blend-mode: exclusion;
+//   pointer-events: none;
+// }
+
+// // without this thetoolbar icons don't get filtered
+// // i haven't noticed any symptoms of this yet
+// * {
+//   z-index: inherit;
+// }
+
+// // THIS SECTION ADDS PREVENTS CERTAIN ELEMENTS FROM BEING FILTERED
+// // ... via z-index
+// // setting z-index on img didn't work 
+// // .image-inline is a cke class in spans containing images... 
+// // span:has(img) also works
+// .image-inline, img, span:has(img),
+// a, video, audio, iframe, canvas, svg, embed, object, applet {
+//   position: relative;
+//   z-index: 10001 !important;
+// }
+
+// #endregion
+
+
+// the original 50% split
+
+
+
+
+// MAKING IT STRECTH regardless of 1 or 2 editors
+// i hate css so much... im sure there is a better way to do this
+
+// .ck-editor {
+//   height: 100%;
+//   flex-grow: 1;
+//   display: flex;
+//   flex-direction: column;
+//   overflow: hidden;
+
+//   .ck-editor__main {
+//     display: default;
+//     height: 100%;
+
+//     .ck-content {
+//       display: default;
+//       height: 100%;
+
+//     }
+//   }
+// }
+
+
+
+// .ck-editor {
+//   height: 100%;
+
+//   .ck-editor__main {
+//     height: 100%;
+
+//     .ck-content {
+//       height: 100%;
+    
+//     }
+    
+//   }
+
+// }
+
+
+
+
+
+
+
+

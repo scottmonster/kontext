@@ -1,0 +1,6 @@
+dir: path/to/kontext
+contextPaths:
+  - /home/scott/kontext/contexts
+multiMonitor:
+  - 0
+  - 1

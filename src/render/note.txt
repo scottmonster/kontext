@@ -1,0 +1,40 @@
+
+
+That isn't right.
+colorOne is:
+rgb(248, 206, 86)
+hsl(44, 92%, 65%)
+
+hsl(45, 67%, 62%)
+
+after invert(88%) it becomes:
+rgb(36, 68, 159)
+hsl(224, 63%, 38%)
+
+then if we do invert(100%) it becomes:
+rgb(219, 187, 96)
+hsl(44, 63%, 62%)
+
+
+
+hsl(32, 52%, 25%)
+
+Is it possible to achieve the same thing using some variation of filter: hue-rotate(xxx) saturate(xxx) brightness(xxx);?
+
+
+
+Im using this right now but it doesn't restore images. how can i exclude or restore images?
+
+$blackDepth: 90;
+$filter: calc(#{$blackDepth} * 1%);
+body {
+  background-color: hsl(0, 0%, #{$filter});
+  mix-blend-mode: difference;
+
+  a, img, video, audio, iframe, canvas, svg, embed, object, applet {
+    filter: invert(90%);
+  }
+}
+
+
+

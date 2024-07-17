@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+
+
+npx @electron/asar /home/scott/Documents/projects/kontext_root/ef_vite_ts/out/ef_vite_ts-linux-x64/resources/app.asar extracted
